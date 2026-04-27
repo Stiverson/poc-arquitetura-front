@@ -1,0 +1,24 @@
+.headerContainer {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.textGradient {
+  background: -webkit-linear-gradient(#fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #aaa;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1rem;
+}
