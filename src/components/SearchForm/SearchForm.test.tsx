@@ -23,7 +23,7 @@ describe('SearchForm Component', () => {
   it('deve habilitar o botão quando o searchInput tiver texto', () => {
     render(
       <SearchForm 
-        searchInput="codurance" 
+        searchInput="usuário git" 
         setSearchInput={vi.fn()} 
         handleSearch={vi.fn()} 
         isLoading={false} 
@@ -34,17 +34,17 @@ describe('SearchForm Component', () => {
     expect(button).not.toBeDisabled();
   });
 
-  it('deve mostrar o texto de "Buscando..." e desabilitar o botão durante o loading', () => {
+  it('deve mostrar o texto de "Procurando..." e desabilitar o botão durante o loading', () => {
     render(
       <SearchForm 
-        searchInput="codurance" 
+        searchInput="usuário git" 
         setSearchInput={vi.fn()} 
         handleSearch={vi.fn()} 
         isLoading={true} 
       />
     );
 
-    const button = screen.getByRole('button', { name: /Buscando\.\.\./i });
+    const button = screen.getByRole('button', { name: /Procurando\.\.\./i });
     expect(button).toBeDisabled();
   });
 });

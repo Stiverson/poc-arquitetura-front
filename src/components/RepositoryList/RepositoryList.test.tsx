@@ -4,11 +4,12 @@ import { RepositoryList } from './RepositoryList';
 import { type Repository } from '../../services/githubService';
 
 describe('RepositoryList Component', () => {
-  // 1. um mock  com a exata tipagem que o componente espera
+
+  // 1. um mock  com a mesma tipagem que o componente espera
   const mockRepos: Repository[] = [
     {
       id: 1,
-      name: 'react-craftsmanship',
+      name: 'react-arquiteted',
       description: 'A clean architecture POC',
       html_url: 'https://github.com/Stiverson/poc',
       stargazers_count: 999,
@@ -47,7 +48,7 @@ describe('RepositoryList Component', () => {
     render(<RepositoryList repositories={mockRepos} isLoading={false} isError={false} />);
     
     // Verifica se os nomes dos repositórios renderizaram como links
-    expect(screen.getByRole('link', { name: 'react-craftsmanship' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'react-arquiteted' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'legacy-spaghetti-code' })).toBeInTheDocument();
 
     // Verifica se a descrição e a linguagem apareceram no primeiro repositório

@@ -1,6 +1,6 @@
 # POC Arquitetura Front-end
 
-(POC) focada em arquitetura escalável e limpa para Front-end, utilizando princípios de Software Craftsmanship.
+(POC) focada em arquitetura escalável e limpa para Front-end.
 
 ## Tecnologias
 - **React + Vite**

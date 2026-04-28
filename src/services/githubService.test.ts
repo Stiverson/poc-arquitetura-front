@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, type Mock } from 'vitest';
 import { fetchRepositories } from './githubService';
 
-// Padrão : globalThis funciona tanto no Node quanto no Browser
+// Teste Padrão : globalThis funciona tanto no Node quanto no Browser
 globalThis.fetch = vi.fn();
 
 describe('githubService', () => {
@@ -10,15 +10,18 @@ describe('githubService', () => {
     const mockRepos = [{ id: 1, name: 'react', stargazers_count: 1000 }];
     
     // Mudança o (fetch as any) por (globalThis.fetch as Mock)
+
     (globalThis.fetch as Mock).mockResolvedValue({
       ok: true,
       json: async () => mockRepos,
     });
 
     // Ação (Act)
+
     const result = await fetchRepositories('facebook');
 
     // Afirmação (Assert)
+    
     expect(globalThis.fetch).toHaveBeenCalledWith('https://api.github.com/users/facebook/repos?sort=updated');
     expect(result).toEqual(mockRepos);
   });

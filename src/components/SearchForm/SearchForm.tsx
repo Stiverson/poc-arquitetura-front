@@ -15,7 +15,7 @@ export function SearchForm({ searchInput, setSearchInput, handleSearch, isLoadin
         type="text"
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
-        placeholder="Digite o nome de usuário ou organização..."
+        placeholder="Digite o nome de usuário git hub ou organização..."
         className={styles.input}
       />
       <button 
@@ -23,7 +23,7 @@ export function SearchForm({ searchInput, setSearchInput, handleSearch, isLoadin
         disabled={isLoading || !searchInput.trim()} 
         className={styles.button}
       >
-        {isLoading ? 'Buscando...' : 'Buscar'}
+        {isLoading ? 'Procurando...' : 'Buscar'}
       </button>
     </form>
   );

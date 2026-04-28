@@ -25,7 +25,7 @@
 
 .repoLink {
   text-decoration: none;
-  color: #58a6ff; /* A cor azul exata dos links do GitHub */
+  color: #58a6ff; /* A cor azul como os links do GitHub */
 }
 
 .repoLink:hover {
