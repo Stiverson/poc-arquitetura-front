@@ -13,7 +13,7 @@ describe('SearchForm Component', () => {
       />
     );
 
-    const input = screen.getByPlaceholderText(/Digite o nome de usuário ou organização/i);
+    const input = screen.getByPlaceholderText(/Digite o nome de usuário git hub ou organização/i);
     const button = screen.getByRole('button', { name: /Buscar/i });
 
     expect(input).toBeInTheDocument();
